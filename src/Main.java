@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 public class Main {
     static double tarifa = 5.2;
     public static void main(String[] args) {
@@ -18,5 +20,8 @@ public class Main {
         System.out.println(b.passarCatraca());
         System.out.println(a.consultar());
         System.out.println(b.consultar());
+
+        JOptionPane.showMessageDialog(null, "oierrrr");
+        String nome = JOptionPane.showInputDialog("qual seu nome?");
     }
 }
