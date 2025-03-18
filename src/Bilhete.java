@@ -14,23 +14,25 @@ public class Bilhete {
         this.usuario = new Usuario(nomeDoUsuario, cpf, perfil);
     }
 
-    public void carregar(double carga) {
+    public double carregar(double carga) {
         if(carga > 0) {
             this.saldo += carga;
         }
+        return this.saldo;
     }
 
-    public void consultar() {
-        System.out.println("Saldo atual: " +fM.format(this.saldo));
+    public String consultar() {
+        return "Saldo atual: " +fM.format(this.saldo);
     }
 
-    public void passarCatraca() {
+    public double passarCatraca() {
         double result = this.saldo - Main.tarifa;
         if (result < 0) {
             System.out.println("Saldo insuficiente!");
         } else {
             this.saldo = result;
         }
+        return this.saldo;
     }
 
     @Override
