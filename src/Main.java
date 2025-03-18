@@ -6,19 +6,17 @@ public class Main {
         System.out.println(a);
         System.out.println(b);
         a.carregar(50);
-        b.carregar(15);
-        a.consultar();
-        b.consultar();
+        b.carregar(10);
+        System.out.println(a.consultar());
+        System.out.println(b.consultar());
 
-        a.passarCatraca();
-        b.passarCatraca();
-        a.consultar();
-        b.consultar();
+        System.out.println(a.passarCatraca());
+        System.out.println(b.passarCatraca());
+        System.out.println(a.consultar());
+        System.out.println(b.consultar());
 
-        b.passarCatraca();
-        b.passarCatraca();
-        b.passarCatraca();
-        a.consultar();
-        b.consultar();
+        System.out.println(b.passarCatraca());
+        System.out.println(a.consultar());
+        System.out.println(b.consultar());
     }
 }

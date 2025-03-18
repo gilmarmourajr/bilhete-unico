@@ -25,20 +25,18 @@ public class Bilhete {
         return "Saldo atual: " +fM.format(this.saldo);
     }
 
-    public double passarCatraca() {
-        if(this.usuario.perfil.equalsIgnoreCase("professor") || this.usuario.perfil.equalsIgnoreCase("estudante")) {
-            double result = this.saldo - (Main.tarifa * 0.5);
-        } else {
-            double result = this.saldo - Main.tarifa;
+    public String passarCatraca() {
+        double debito = Main.tarifa / 2;
+        if(this.usuario.perfil.equalsIgnoreCase("comum")) {
+            debito = Main.tarifa;
         }
 
-        if (result < 0) {
-            System.out.println("Saldo insuficiente!");
-            return saldo;
-        } else {
-            this.saldo = result;
+        if(this.saldo >= debito) {
+            this.saldo -= debito;
+            return "Passagem liberada!";
         }
-        return this.saldo;
+
+        return "Saldo insuficiente.";
     }
 
     @Override
