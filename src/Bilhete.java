@@ -26,9 +26,15 @@ public class Bilhete {
     }
 
     public double passarCatraca() {
-        double result = this.saldo - Main.tarifa;
+        if(this.usuario.perfil.equalsIgnoreCase("professor") || this.usuario.perfil.equalsIgnoreCase("estudante")) {
+            double result = this.saldo - (Main.tarifa * 0.5);
+        } else {
+            double result = this.saldo - Main.tarifa;
+        }
+
         if (result < 0) {
             System.out.println("Saldo insuficiente!");
+            return saldo;
         } else {
             this.saldo = result;
         }
