@@ -17,6 +17,10 @@ public class Usuario {
         return perfil;
     }
 
+    public String getCpf() {
+        return cpf;
+    }
+
     @Override
     public String toString() {
         return this.nome + ", CPF " + this.cpf + " - Perfil: " + this.perfil;
