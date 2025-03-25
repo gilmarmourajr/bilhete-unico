@@ -190,7 +190,7 @@ public class Interface {
     private String listarUsuarios() {
         String output = "";
         for (int i = 0; i < this.bilhetes.size(); i++) {
-            output += (i + 1) + " - " + this.bilhetes.get(i) + "\n";
+            output += (i + 1) + " - " + this.bilhetes.get(i) + "\n--------------------------------------------------------------------\n";
         }
         return output;
     }
