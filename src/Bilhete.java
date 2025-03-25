@@ -2,9 +2,9 @@ import java.text.DecimalFormat;
 import java.util.Random;
 
 public class Bilhete {
-    int numero;
-    double saldo;
-    Usuario usuario;
+    private int numero;
+    private double saldo;
+    private Usuario usuario;
     Random rd = new Random();
     DecimalFormat fM = new DecimalFormat("R$##0.00");
 
@@ -27,7 +27,7 @@ public class Bilhete {
 
     public String passarCatraca() {
         double debito = Main.tarifa / 2;
-        if(this.usuario.perfil.equalsIgnoreCase("comum")) {
+        if(this.usuario.getPerfil().equalsIgnoreCase("comum")) {
             debito = Main.tarifa;
         }
 
@@ -37,6 +37,10 @@ public class Bilhete {
         }
 
         return "Saldo insuficiente.";
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
     }
 
     @Override
