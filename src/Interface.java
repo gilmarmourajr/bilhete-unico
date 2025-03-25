@@ -1,14 +1,14 @@
 import javax.swing.*;
 import java.util.ArrayList;
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class Interface {
-    private Scanner sc;
+//    private Scanner sc;
     private ArrayList<Bilhete> bilhetes;
     private String senhaAdm;
 
     public Interface() {
-        sc = new Scanner(System.in);
+//        sc = new Scanner(System.in);
         bilhetes = new ArrayList<>();
         senhaAdm = "1234";
     }
@@ -190,7 +190,7 @@ public class Interface {
     private String listarUsuarios() {
         String output = "";
         for (int i = 0; i < this.bilhetes.size(); i++) {
-            output += (i + 1) + " - " + this.bilhetes.get(i).getUsuario() + "\n";
+            output += (i + 1) + " - " + this.bilhetes.get(i) + "\n";
         }
         return output;
     }
@@ -208,7 +208,7 @@ public class Interface {
 //            System.out.println("Digite o CPF:");
 //            String cpf = sc.nextLine();
 
-            String perfil = JOptionPane.showInputDialog("Digite o perfil do usuário (comum, estudante).");
+            String perfil = JOptionPane.showInputDialog("Digite o perfil do usuário (comum, estudante, professor).");
 //            System.out.println("Digite o perfil do usuário (comum, estudante):");
 //            String perfil = sc.nextLine();
 
